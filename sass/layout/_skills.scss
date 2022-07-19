@@ -1,0 +1,130 @@
+.skills {
+    grid-column: full-start / full-end;
+    margin-top: -15rem;
+    color: $color-primary;
+    background-image: repeating-linear-gradient(
+        15deg,
+        $color-white,
+        $color-white 18px,
+        rgba($color-quaternary-light-2, .55) 18px,
+        rgba($color-quaternary-light-2, .55) 20px
+    );
+    background-size: 75px 32px;
+    animation: shooting-stars 3s linear 0s infinite;
+    
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border-bottom: 5px solid $color-quaternary-light-2;
+    
+    &__content {
+        grid-column: 2 / -2;
+        padding: 20rem 4rem 15rem;
+        border-left: 1px solid $color-quaternary-light-2;
+        border-right: 1px solid $color-quaternary-light-2;
+        background-color: $color-white;
+
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        align-content: flex-start;
+    }
+
+    &__front {
+        padding-right: 3rem;
+        grid-column: 3 / -1;
+        border: 1px solid $color-quaternary-light-2;
+        padding: 3rem;
+        border-radius: 8px;
+    }
+
+    &__title {
+        background-image: linear-gradient(to right, $color-primary, $color-quaternary-dark 20%);
+        background-clip: text;
+        color: transparent;
+        
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 1.5rem;
+
+        &::after {
+            content: "";
+            height: 3px;
+            display: block;
+            background-image: linear-gradient(to right, $color-quaternary-dark, $color-highlights);
+        }
+    }    
+
+    &__list {
+        columns: 2;
+        column-gap: 2rem;
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    &__item-hidden {
+        display: none;
+    }
+
+    &__item-other {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 2rem;
+        font-weight: 400;
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+    }
+    
+    &__svg {
+        height: 5rem;
+        width: 5rem;
+        margin-right: 1rem;
+        fill: $color-quaternary;
+    }
+
+    &__others {
+        border: 1px solid $color-quaternary-light-2;
+        border-top: none;
+        padding-right: 3rem;
+        grid-column: 4 / -1;
+        padding: 3rem;
+        border-radius: 8px;
+    }
+
+    &__typewriter {
+        grid-column: 1 / span 3;
+        grid-row: 2 / 3;
+        margin-top: 1rem;
+        margin-left: 30%;
+
+        &-text {
+            border-right: 2px solid $color-primary;
+            font-size: 2rem;
+            color: $color-primary;
+            font-weight: 400;
+        }
+    }
+
+    &__card {
+        grid-column: 1 / span 2;
+        grid-row: 2 / 3;
+        margin-left: 6rem;
+        align-self: end;
+        position: relative;
+    }
+
+    &__features {
+        grid-column: 4 / -1;
+        outline: 2px solid green;
+    }
+}

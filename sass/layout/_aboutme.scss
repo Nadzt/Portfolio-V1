@@ -1,0 +1,73 @@
+.aboutme {
+    grid-column: full-start / full-end;
+    position: relative;
+    min-height: 50vh;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    background-image:   linear-gradient(to bottom, $color-primary, rgba($color-quaternary-dark-2, 1), rgba($color-quaternary, 1));
+    background-position: 0 33%;
+    background-size: cover;
+
+    display: grid;
+    align-content: center;
+    grid-template-columns: .75fr 1fr;
+
+    &__background-text {
+        text-transform: uppercase;
+        font-size: 20rem;
+        font-weight: 700;
+        color: $color-quaternary-dark;
+        line-height: 1;
+        // opacity: .6;
+        position: absolute;
+        top: 2vw;
+        left: 4rem;
+        z-index: 0;
+    }
+
+    &__text {
+        font-size: 3rem;
+        font-weight: 100;
+        z-index: 1;
+        grid-column: 2 / -1;
+        padding-right: 10vw;
+
+    }
+
+    &__typewriter {
+
+        & .typewriter-text {
+            $color: $color-white;
+        }
+    }
+
+    &__flag {
+        font-size: 4rem;
+        text-decoration: underline 2px;
+        font-weight: 300;
+        
+        &:hover {
+            color: transparent;
+            -webkit-text-stroke: 1px $color-primary;
+            text-decoration: none;
+        }
+    }
+
+    &__svg {
+        position: fixed;
+        opacity: 0;
+
+        &--1 { // arriba
+            transition: all .4s ease-out;
+        }
+        &--2 { // medio
+            transition: all .1s ease-out;
+        }
+        &--3 { // sol
+            transition: all .6s ease-out;
+        }
+        &--4 { // abajo
+            transition: all .9s ease-out;
+        }
+    }
+
+}

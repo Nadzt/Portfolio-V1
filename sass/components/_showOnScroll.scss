@@ -1,0 +1,25 @@
+.scroll {
+
+    &__enter {
+        opacity: 0;
+        transition: all .8s;
+        
+        &--right {
+            transform: translateX(2rem);
+        }
+
+        &--left {
+            transform: translateX(-2rem);
+        }
+
+        &--up {
+            transform: translateY(-2rem);
+        }
+    }
+
+
+    &__show {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,103 @@
+%heading { // @extend %heading;
+    font-family: $font-display;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.heading {
+    
+    &-1 {
+        @extend %heading;
+        font-size: 8rem;
+        white-space: pre;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        backface-visibility: hidden;
+
+        &__sub {
+            display: grid;
+            grid-template-columns: repeat(2, min-content);
+            align-items: baseline;
+
+            &--1 {
+                justify-self: end;
+            }
+        }
+
+        &__initial {
+            font-size: 10rem;
+            position: relative;
+            line-height: .75;
+
+            &::after {
+                content: attr(data-text);
+                @include positionAbsolute;
+                color: $color-primary;
+                -webkit-text-stroke: 1px $color-white;
+                overflow: hidden;
+                animation: fill-initials 1s cubic-bezier(0.83, 0, 0.17, 1) 0s forwards;
+            }
+        }
+
+        &__rest {
+            max-width: 0px;
+            overflow: hidden;
+            position: relative;
+            animation: expand-name .5s cubic-bezier(0.7, 0, 0.84, 0) 1.1s forwards;
+
+            &::after {
+                content: "";
+                @include positionAbsolute;
+                background-color: white;
+                animation: spoiler-reveal .65s cubic-bezier(.694,.048,.335,1) 1.75s forwards;
+            }
+        }
+
+
+    }
+
+    &-2 {
+        @extend %heading;
+        font-size: 3.5rem;
+        height: min-content;
+        position: relative;
+        display: inline-block;
+        padding: .5rem 2rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        color: transparent;
+        animation: spoiler-text .1s linear calc(.6s + 2.4s) forwards;
+
+        &::before {
+            content: "";
+            @include positionAbsolute;
+            background-color: $color-quaternary-dark;
+            transform: translateX(-105%);
+            animation: spoiler-reveal-2 1s ease-in calc(0s + 2.4s) forwards;
+        }
+
+        &::after {
+            content: "";
+            @include positionAbsolute;
+            background-color: $color-quaternary;
+            transform: translateX(-105%);
+            animation: spoiler-reveal-2 .9s cubic-bezier(1,.03,.73,.74) calc(.1s + 2.4s) forwards;
+        }
+    }
+
+    &-3 {
+        @extend %heading;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    &-4 {
+        @extend %heading;
+        color: $color-primary;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+.rtt__btn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    z-index: 999;
+    border: 2px solid $color-white;
+    outline: none;
+    border-radius: 50%;
+    background-color: $color-white;
+    fill: $color-primary;
+    cursor: pointer;
+    height: 5.5rem;
+    width: 5.5rem;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-primary;
+        fill: $color-white;
+        transform: translateY(-3px);
+        box-shadow: 0 2rem 4rem rgba($color-black, .6);
+    }
+}

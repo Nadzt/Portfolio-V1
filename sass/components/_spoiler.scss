@@ -1,0 +1,7 @@
+.spoiler-bg {
+    @include positionAbsolute;
+    background-color: $color-white;
+    transform: translateX(-105%);
+    z-index: 1;
+    animation: spoiler-reveal-2 .55s linear calc(.65s + 2.4s) forwards;
+}

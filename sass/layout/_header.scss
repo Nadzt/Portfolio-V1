@@ -1,0 +1,81 @@
+.header {
+    background-color: $color-primary;
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end ;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-content: center;
+
+    &__svg-div {
+        opacity: 0; ///
+
+        &--1 {
+            animation: appear 1s linear 2.6s forwards;
+        }
+
+        &--2 {
+            animation: appear .5s linear 3.5s forwards;
+        }
+    }
+
+    &__svg {
+        @include absoluteCenter;
+        width: 35vw;
+        height: min-content;
+
+        &--3,
+        &--5 {
+            animation: rotate-left 8s linear 4s infinite reverse;
+        }
+
+        &--4 {
+            animation: rotate-left 20s linear 4s infinite;
+        }
+    }
+
+    &__main {
+        grid-column: 2 / 3;
+        display: grid;
+        transform: translateY(-20px);
+        &-title--1 {
+            transform: translateX(-20%);
+            justify-self: start;
+        }
+        &-title--3 {
+            transform: translateX(40%);
+            justify-self: end;
+        }
+    }
+
+    &__socials {
+        grid-column: 3 / 4;
+        justify-self: end;
+
+        &-list {
+            list-style: none;
+            padding-right: 3rem;
+        }
+
+        &-item {
+            height: 5rem;
+            width: 5rem;
+            transition: all .2s ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            
+            & svg {
+                height: 100%;
+                width: 100%;
+                fill: $color-white;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+}

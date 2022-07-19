@@ -1,0 +1,49 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    // transform: scale(1.1);
+    transform-origin: bottom;
+    transition: all .8s linear;
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        transition: all 1.5s;
+
+        &--front {
+            transform: rotateZ(0deg) rotateX(0deg);
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+        }
+
+    }
+
+    &__table {
+        position: absolute;
+        bottom: 0;
+    }
+
+    // Animaciones para la card--1
+    // &.animation-on 
+    &__side--front {
+        animation: card-1-front 5s linear 0s alternate infinite;
+    }
+
+    // &.animation-on 
+    &__side--back {
+        animation: card-1-back 5s linear 0s alternate infinite;
+    }
+
+    // &.animation-on 
+    // {
+    //     transform: scaleY(1);
+    //     margin-left: 1rem;
+    // }
+}

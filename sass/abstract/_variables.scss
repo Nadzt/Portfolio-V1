@@ -1,0 +1,52 @@
+// COLOR VARIABLES
+$color-primary: #1B1B22;
+$color-primary-light: #1C1C25;
+// $color-primary-light: #2D2D39;
+$color-primary-dark: #121216;
+
+$color-secondary: #49606E;
+$color-secondary-light: #5A7687;
+$color-secondary-dark: #394B56;
+
+$color-tertiary: #98A886;
+$color-tertiary-light: #AEBAA0;
+$color-tertiary-dark: #869871;
+
+$color-quaternary: #7650A5;
+$color-quaternary-light: #8B68B6;
+$color-quaternary-light-2: #EAE4F1;
+$color-quaternary-dark: #62428A;
+$color-quaternary-dark-2: #3C2853;
+$color-quaternary-bright: #7510F7;
+
+$color-highlights: #FFDE0A;
+$color-highlights-2: #7A4829;
+
+$color-eclipse-1: #DCD7C9;
+$color-eclipse-2: #2C3639;
+
+$color-blood-moon: #D6365B;
+
+$color-grey: #aaa;
+$color-grey-light-1: #f3f3f3;
+$color-grey-light-2: #edf3f7; // not so white
+$color-grey-dark-1: #292f43;
+$color-grey-dark-2: #272D3F; // I like darker grey for font
+
+$color-black: #000;
+$color-white: #fff;
+
+// FONT VARIABLES
+$font-primary: "Roboto", sans-serif; // Normal font for text
+$font-display: "Poppins", sans-serif; // Font for H1s and subtitles
+$font-default-size: 1.6rem;
+
+// BOX SHADOW VARIABLES
+$box-shadow-light: 0 2rem 4rem rgba(0, 0, 0, .2);
+$box-shadow-dark: 0 2rem 6rem rgba( 0, 0, 0, .4);
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px

@@ -1,0 +1,41 @@
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::selection {
+    background-color: $color-quaternary-dark-2;
+    color: $color-highlights;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-white;
+    font-size: $font-default-size;
+    font-weight: 300;
+    background-color: $color-white;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh minmax(32rem, min-content);
+    grid-template-columns: [full-start] 1fr [content-start] repeat(6, 1fr) [content-end] 1fr [ full-end ];
+}

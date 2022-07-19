@@ -1,0 +1,67 @@
+.footer {
+    grid-column: 1 / -1;
+    color: $color-primary;
+    padding: 5rem;
+    background-color: $color-primary;
+    border-top: 2px solid $color-quaternary;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__div {
+        border: 4px solid $color-quaternary-dark;
+        padding: 3rem 8rem;
+        border-radius: 1000px;
+        position: relative;
+        background-color: $color-white;
+        grid-column: 2/3;
+    }
+
+    &__text {
+        font-size: 3rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__icons {
+        margin-top: 3rem;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+
+    &__item {
+        height: 5.5rem;
+        width: 5.5rem;
+        padding: 1rem;
+        background-color: $color-quaternary-dark;
+        border-radius: 50%;
+        transition: all .2s ease-in-out;
+        border: 2px solid transparent;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+            fill: $color-white;
+        }
+
+        &:hover {
+            background-color: $color-white;
+            box-shadow: $box-shadow-dark;
+            transform: translateY(-3px);
+            border: 2px solid $color-quaternary;
+            cursor: pointer;
+        }
+
+        &:hover svg {
+            fill: $color-quaternary;
+        }
+
+        &:active {
+            box-shadow: $box-shadow-dark;
+            transform: translateY(-1px);
+        }
+    }
+}
