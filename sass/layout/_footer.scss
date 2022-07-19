@@ -8,8 +8,10 @@
     grid-template-columns: .8fr 1fr .8fr;
     @include responsive(notebook) { 
         grid-template-columns: .5fr 1fr .5fr;
-     }
-     
+    }
+    @include responsive(smallphone) { 
+        padding: 2rem;          
+    };
 
     &__div {
         border: 4px solid $color-quaternary-dark;

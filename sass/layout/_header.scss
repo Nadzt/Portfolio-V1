@@ -24,6 +24,8 @@
         width: 35vw;
         height: min-content;
 
+        @include responsive(sm-notebook) { width: 70vw; };
+
         &--3,
         &--5 {
             animation: rotate-left 8s linear 4s infinite reverse;
@@ -32,9 +34,8 @@
         &--4 {
             animation: rotate-left 20s linear 4s infinite;
         }
-        @include responsive(phone) { 
-            width: 70vw;
-        };
+        
+        
     }
 
     &__main {
@@ -45,6 +46,12 @@
             transform: translateX(-20%);
             justify-self: start;
             @include responsive(tablet) { transform: translate(0); justify-self: center; }
+        }
+        &-title--2 {
+            @include responsive(smallphone) { 
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            };
         }
         &-title--3 {
             transform: translateX(30%);

@@ -6,12 +6,18 @@
     background-image:   linear-gradient(to bottom, $color-primary, rgba($color-quaternary-dark-2, 1), rgba($color-quaternary, 1));
     background-position: 0 33%;
     background-size: cover;
-
+    
     display: grid;
     align-content: center;
     grid-template-columns: .75fr 1fr;
-
+    
+    
     @include responsive(tablet) { grid-template-columns: .3fr 1fr; }
+    
+    @include responsive(smallphone) { 
+        min-height: 70vh;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    };
 
     &__background-text {
         text-transform: uppercase;
@@ -31,6 +37,14 @@
         }
         @include responsive(phone) { 
             font-size: 9rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+        };
+
+        @include responsive(smallphone) { 
+            font-size: 6rem;
+            top: 20vh
         };
     }
 
@@ -42,8 +56,14 @@
         padding-right: 10vw;
         @include responsive(phone) { 
             grid-column: 1/-1;
+            text-align: center;
             padding: 0 2rem;
         };
+        @include responsive(smallphone) { 
+            padding: 0 1.5rem;
+            font-size: 2.5rem;     
+        };
+
     }
 
     &__typewriter {

@@ -15,7 +15,11 @@
         grid-template-columns: repeat(2, 1fr);
         backface-visibility: hidden;
         @include responsive(phone) { 
-            font-size: 6rem
+            font-size: 6rem;
+        };
+
+        @include responsive(smallphone) {
+            font-size: 4rem;
         };
 
         &__sub {
@@ -33,8 +37,12 @@
             position: relative;
             line-height: .75;
             @include responsive(phone) { 
-                font-size: 7rem
+                font-size: 7rem;
             };
+            @include responsive(smallphone) { 
+                font-size: 5rem;
+            };
+            
 
             &::after {
                 content: attr(data-text);
@@ -51,7 +59,9 @@
             overflow: hidden;
             position: relative;
             animation: expand-name .5s cubic-bezier(0.7, 0, 0.84, 0) 1.1s forwards;
-
+            @include responsive(smallphone) { 
+                line-height: 1.3;
+            };
             &::after {
                 content: "";
                 @include positionAbsolute;
@@ -77,6 +87,9 @@
         @include responsive(phone) { 
             font-size: 3rem;
             padding: 0;
+        };
+        @include responsive(smallphone) { 
+            font-size: 2.5rem;      
         };
         &::before {
             content: "";
