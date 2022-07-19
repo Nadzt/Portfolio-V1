@@ -32,6 +32,9 @@
         &--4 {
             animation: rotate-left 20s linear 4s infinite;
         }
+        @include responsive(phone) { 
+            width: 70vw;
+        };
     }
 
     &__main {
@@ -41,20 +44,41 @@
         &-title--1 {
             transform: translateX(-20%);
             justify-self: start;
+            @include responsive(tablet) { transform: translate(0); justify-self: center; }
         }
         &-title--3 {
-            transform: translateX(40%);
+            transform: translateX(30%);
             justify-self: end;
+            @include responsive(sm-notebook) { transform: translateX(15%); }
+            @include responsive(tablet) { transform: translateX(0); justify-self: center; }
         }
+    
+        @include responsive(phone) { 
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+        };
     }
 
     &__socials {
         grid-column: 3 / 4;
         justify-self: end;
+        @include responsive(phone) { 
+            position: absolute;
+            right: 3rem;
+            bottom: 2rem;
+        };
 
         &-list {
             list-style: none;
             padding-right: 3rem;
+            @include responsive(sm-notebook) { 
+                transform: translateY(150%)
+            };
+            @include responsive(phone) { 
+                padding: 0;
+                transform: translateY(0);
+                display: flex;
+            };
         }
 
         &-item {
@@ -64,6 +88,10 @@
 
             &:not(:last-child) {
                 margin-bottom: 1rem;
+                @include responsive(phone) { 
+                    margin-bottom: 0;
+                    margin-right: 1.5rem;
+                };
             }
             
             & svg {
@@ -74,6 +102,10 @@
 
             &:hover {
                 transform: translateY(-3px);
+            }
+            &:active {
+                transform: translateY(-1px);
+
             }
         }
     }

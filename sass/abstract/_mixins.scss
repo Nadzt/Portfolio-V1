@@ -20,10 +20,13 @@
     @if $breakpoint == tablet {
         @media only screen and (max-width: $bp-medium) { @content };
     }
+    @if $breakpoint == sm-notebook {
+        @media only screen and (max-width: $bp-medium-large) { @content };
+    }
     @if $breakpoint == notebook {
         @media only screen and (max-width: $bp-large) { @content };
     }
     @if $breakpoint == desktop {
         @media only screen and (max-width: $bp-largest) { @content };
     }
-} // @include responsive(phone) { --------- };
+} // @include responsive(notebook) { --------- };

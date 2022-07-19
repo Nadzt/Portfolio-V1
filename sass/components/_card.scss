@@ -8,6 +8,15 @@
     transform-origin: bottom;
     transition: all .8s linear;
 
+    @include responsive(desktop) {
+        height: 400px;
+    }
+    @include responsive(sm-notebook) { 
+        height: 280px;
+    }
+    @include responsive(tablet) { 
+        height: 250px;
+    }
     &__side {
         position: absolute;
         top: 0;

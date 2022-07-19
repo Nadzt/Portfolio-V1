@@ -27,6 +27,10 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         align-content: flex-start;
+        @include responsive(phone) { 
+            grid-column: 1/-1;
+            background-color: transparent;
+        };
     }
 
     &__front {
@@ -35,6 +39,10 @@
         border: 1px solid $color-quaternary-light-2;
         padding: 3rem;
         border-radius: 8px;
+        @include responsive(tablet) { grid-column: 1 / -1; }
+        @include responsive(phone) { 
+            background-color: $color-white;
+        };
     }
 
     &__title {
@@ -99,6 +107,10 @@
         grid-column: 4 / -1;
         padding: 3rem;
         border-radius: 8px;
+        @include responsive(phone) { 
+            background-color: $color-white;
+            grid-column: 1/-1;
+        };
     }
 
     &__typewriter {
@@ -121,6 +133,26 @@
         margin-left: 6rem;
         align-self: end;
         position: relative;
+
+        @include responsive(notebook) { margin-left: 0rem; }
+        @include responsive(tablet) { margin-bottom: auto; margin-top: auto; }
+        @include responsive(phone) { 
+            display: none
+        };
+        & svg {
+            @include responsive(desktop) { 
+                width: 400px;
+                height: 400px;
+            }
+            @include responsive(sm-notebook) { 
+                width: 280px;
+                height: 280px;
+            }
+            @include responsive(tablet) { 
+                width: 250px;
+                height: 250px;
+            }
+        }
     }
 
     &__features {

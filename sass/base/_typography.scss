@@ -14,6 +14,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         backface-visibility: hidden;
+        @include responsive(phone) { 
+            font-size: 6rem
+        };
 
         &__sub {
             display: grid;
@@ -29,6 +32,9 @@
             font-size: 10rem;
             position: relative;
             line-height: .75;
+            @include responsive(phone) { 
+                font-size: 7rem
+            };
 
             &::after {
                 content: attr(data-text);
@@ -68,7 +74,10 @@
         backface-visibility: hidden;
         color: transparent;
         animation: spoiler-text .1s linear calc(.6s + 2.4s) forwards;
-
+        @include responsive(phone) { 
+            font-size: 3rem;
+            padding: 0;
+        };
         &::before {
             content: "";
             @include positionAbsolute;

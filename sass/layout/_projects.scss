@@ -23,6 +23,13 @@
         margin-left: -10rem;
         z-index: 1;
         margin-bottom: 8rem;
+        @include responsive(sm-notebook) { 
+            grid-column: 1/-1;
+            margin: 8rem 2rem;
+        }
+        @include responsive(phone) { 
+            margin: 0rem 1rem 10rem;
+        };
 
         &--1 {
             grid-row: 2 / 3;
@@ -39,6 +46,12 @@
         border-bottom-left-radius: 8px;
         overflow: hidden; 
         position: relative;
+        @include responsive(phone) { 
+            grid-column: 1/ -1;
+            height: 500px;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 8px;
+        };
     }
     &__image {
         width: 100%;
@@ -96,6 +109,15 @@
         border-left: 1px solid $color-primary;
         display: flex;
         flex-direction: column;
+
+        @include responsive(phone) { 
+            grid-row: 2/3;
+            grid-column: 1/-1;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 8px;
+            border-left: none;
+            border-top: 1px solid $color-primary;
+        };
     }
 
     &__name {
@@ -118,11 +140,11 @@
 
     &__item {
         line-height: 1.3;
-        font-size: 1.5;
+        font-size: 1.5rem;
     }
 
     &__text {
-        font-size: 1.5;
+        font-size: 1.5rem;
         color: $color-primary-light;
     }
 
@@ -143,7 +165,7 @@
         border-radius: 50%;
         position: relative;
         transition: all .2s;
-
+        margin-top: 2rem;
         &::after {
             content: "";
             background-color: $color-quaternary;
