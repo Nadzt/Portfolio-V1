@@ -433,7 +433,9 @@ body {
         justify-content: center;
         padding: 2rem 4rem;
         width: max-content;
-        justify-self: center; } }
+        justify-self: center;
+        min-width: max-content;
+        width: 90%; } }
     @media only screen and (max-width: 25em) {
       .footer__div {
         padding: .5rem 1rem;
@@ -444,7 +446,7 @@ body {
     text-align: center; }
     @media only screen and (max-width: 43.75em) {
       .footer__text {
-        width: max-content; } }
+        min-width: max-content; } }
     @media only screen and (max-width: 25em) {
       .footer__text {
         font-size: 2.5rem; } }
@@ -461,7 +463,8 @@ body {
     background-color: #62428A;
     border-radius: 50%;
     transition: all .2s ease-in-out;
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+    margin-right: 1rem; }
     .footer__item svg {
       width: 100%;
       height: 100%;
