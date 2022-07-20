@@ -22,6 +22,15 @@
         grid-column: 2/3;
         @include responsive(phone) { 
             grid-column: 1/-1;
+            display: grid;
+            justify-content: center;
+            padding: 2rem 4rem;
+            width: max-content;
+            justify-self: center
+        };
+        @include responsive(smallphone) { 
+            padding: .5rem 1rem;
+            border-radius: 0;          
         };
     }
 
@@ -29,6 +38,12 @@
         font-size: 3rem;
         font-weight: 300;
         text-align: center;
+        @include responsive(phone) { 
+            width: max-content;
+        };
+        @include responsive(smallphone) { 
+            font-size: 2.5rem;         
+        };
     }
 
     &__icons {

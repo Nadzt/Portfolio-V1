@@ -428,11 +428,26 @@ body {
     grid-column: 2/3; }
     @media only screen and (max-width: 43.75em) {
       .footer__div {
-        grid-column: 1/-1; } }
+        grid-column: 1/-1;
+        display: grid;
+        justify-content: center;
+        padding: 2rem 4rem;
+        width: max-content;
+        justify-self: center; } }
+    @media only screen and (max-width: 25em) {
+      .footer__div {
+        padding: .5rem 1rem;
+        border-radius: 0; } }
   .footer__text {
     font-size: 3rem;
     font-weight: 300;
     text-align: center; }
+    @media only screen and (max-width: 43.75em) {
+      .footer__text {
+        width: max-content; } }
+    @media only screen and (max-width: 25em) {
+      .footer__text {
+        font-size: 2.5rem; } }
   .footer__icons {
     margin-top: 3rem; }
   .footer__list {
