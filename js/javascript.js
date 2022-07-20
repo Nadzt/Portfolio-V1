@@ -151,8 +151,6 @@ window.onload = function() {
         var rotatingText = elements[i].getAttribute('data-text');
         var delayPeriod = elements[i].getAttribute('data-delay-period');
         if (rotatingText) {
-            console.log(rotatingText);
-            console.log(JSON.parse(rotatingText));
             new typewriter(elements[i], JSON.parse(rotatingText), delayPeriod);
         }
     };
