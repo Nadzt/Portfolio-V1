@@ -489,7 +489,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   align-content: center;
   justify-items: center;
-  grid-row-gap: 10vw; }
+  grid-row-gap: 5vw; }
   @media only screen and (max-width: 68.75em) {
     .header {
       grid-row-gap: 8vw; } }
@@ -590,7 +590,9 @@ body {
     display: flex;
     justify-content: center;
     grid-column-gap: 2rem;
-    width: 100%; }
+    width: 100%;
+    opacity: 0;
+    animation: appear .5s linear 3.5s forwards; }
     @media only screen and (max-width: 43.75em) {
       .header__resume {
         grid-column: 1 / -1; } }

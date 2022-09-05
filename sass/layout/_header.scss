@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     align-content: center;
     justify-items: center;
-    grid-row-gap: 10vw;
+    grid-row-gap: 5vw;
 
     @include responsive(sm-notebook) { grid-row-gap: 8vw; };
     @include responsive(tablet) { grid-row-gap: 12vw; };
@@ -130,6 +130,8 @@
         justify-content: center;
         grid-column-gap: 2rem;
         width: 100%;
+        opacity: 0;
+        animation: appear .5s linear 3.5s forwards;
         @include responsive(phone) { 
             grid-column: 1 / -1;
         };
