@@ -6,6 +6,13 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-content: center;
+    justify-items: center;
+    grid-row-gap: 10vw;
+
+    @include responsive(sm-notebook) { grid-row-gap: 8vw; };
+    @include responsive(tablet) { grid-row-gap: 12vw; };
+    @include responsive(phone) { grid-row-gap: 12vw; };
+
 
     &__svg-div {
         opacity: 0; ///
@@ -61,7 +68,6 @@
         }
     
         @include responsive(phone) { 
-            grid-row: 1 / 2;
             grid-column: 1 / -1;
         };
     }
@@ -117,4 +123,55 @@
         }
     }
 
+    &__resume {
+        grid-column: 2/3;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        grid-column-gap: 2rem;
+        width: 100%;
+        @include responsive(phone) { 
+            grid-column: 1 / -1;
+        };
+    }
+    
+    &__download-link,
+    &__download-link:link,
+    &__download-link:visited {
+        font-size: 2rem;
+        color: $color-white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border: 1px solid white;
+        padding: 1rem 2rem;
+        justify-self: start;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        max-width: 35%;
+        transition: all .1s linear;
+        @include responsive(phone) { 
+            font-size: 1.5rem;
+            padding: .5rem 1rem;
+        };
+        @include responsive(smallphone) { 
+            font-size: 1.4rem;
+            padding: .25rem .5rem;
+        };
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-2px);
+            color: black;
+            background-color: white;
+        }
+    }
+
+    &__download-link svg {
+        width: 25px;
+        height: 25px;
+        fill: currentColor;
+    }
 }
