@@ -646,7 +646,7 @@ body {
         border-top-right-radius: 8px;
         flex-direction: column; } }
   .projects__image {
-    width: 100%;
+    min-width: 0;
     height: 100%;
     flex: 1;
     object-fit: cover;
