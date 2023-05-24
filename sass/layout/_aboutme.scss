@@ -3,7 +3,12 @@
     position: relative;
     min-height: 50vh;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-    background-image:   linear-gradient(to bottom, $color-primary, rgba($color-quaternary-dark-2, 1), rgba($color-quaternary, 1));
+    background-image:   linear-gradient(
+        to bottom, 
+        $color-primary 5%,
+        rgba($color-quaternary-dark-2, 1),
+        rgba($color-quaternary, 1)
+    );
     background-position: 0 33%;
     background-size: cover;
     
